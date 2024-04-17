@@ -1,12 +1,39 @@
 <!-- templates/myapp/homepage.html -->
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
+    <style>
+        h2 {
+            margin-top: 30px;
+        }
+        ul {
+            list-style-type: square;
+        }
+    </style>
 </head>
 <body>
-    <h1>{{ message }}</h1>
+    <h1>Welcome to My Short Project</h1>
+    <h2>Instructions</h2>
+    <ul>
+        <li>Create a basic web application using Python and Django that includes:</li>
+        <ul>
+            <li>A homepage displaying a welcome message.</li>
+            <li>At least one additional page with some functionality (e.g., a form submission page).</li>
+            <li>Set up a Git repository to store your web application code.</li>
+            <li>Create a Dockerfile to containerize your web application.</li>
+        </ul>
+        <li>Configure Jenkins to automate the build and deployment process using a Jenkins pipeline.</li>
+        <ul>
+            <li>Your Jenkins pipeline should include stages for:</li>
+            <ul>
+                <li>Checking out the code from the Git repository.</li>
+                <li>Building the Docker image.</li>
+                <li>Running tests (optional but recommended).</li>
+                <li>Pushing the Docker image to a Docker registry.</li>
+                <li>Deploying the application on Tomcat running in Docker containers.</li>
+            </ul>
+        </ul>
+        <li>Document the steps required to set up and run the project.</li>
+    </ul>
 </body>
 </html>
