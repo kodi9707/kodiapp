@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKER_HUB_CREDENTIALS = credentials('docker_id')
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                script {
+                    git "https://github.com/kodi9707/kodiapp.git"
+                }
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    docker.build('kodi9707/kodiimage3')
+                }
+            }
+        }
+
+        stage('Push to Docker Registry') {
+            steps {
+                script {
+                    docker.withRegistry('', DOCKER_HUB_CREDENTIALS) {
+                        echo 'Pushing Docker image to Docker Hub...'
+                        docker.image('kodiimage3:tag3').push()
+                    }
+                }
+            }
+        }
+    }
+}
