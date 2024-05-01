@@ -1,6 +1,6 @@
 # kodiapp
-Short Project 
-Web Application Deployment with Django, Docker, and Jenkins
+Short Project 2
+Web Application Deployment with Django, Docker, and Jenkins for COMP 314
 This project demonstrates the deployment of a simple web application using Python, Django, Docker, and Jenkins.
 
 Prerequisites
