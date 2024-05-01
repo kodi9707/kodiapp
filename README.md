@@ -13,7 +13,7 @@ Jenkins
 Setup and Installation
 Clone the Git Repository:
 
-git clone https://github.com/yourusername/webapp.git
+git clone < Github URL>
 Navigate to the Project Directory:
 
 cd webapp
